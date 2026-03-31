@@ -21,7 +21,7 @@ export function AuthButton() {
   } = useAuth();
 
   // Only ONE admin user allowed
-  const isAdmin = user?.email === 'vomollo101@gmail.com';
+  const isAdmin = user?.email === 'viraggautam8@gmail.com';
 
   if (loading) {
     return (
@@ -78,7 +78,7 @@ export function AuthCard() {
   } = useAuth();
 
   // Only ONE admin user allowed
-  const isAdmin = user?.email === 'vomollo101@gmail.com';
+  const isAdmin = user?.email === 'viraggautam8@gmail.com';
 
   if (loading) {
     return (
@@ -114,7 +114,7 @@ export function AuthCard() {
             Sign in with GitHub
           </Button>
           <div className="text-xs text-gray-500 text-center">
-            Free: 3 messages/day • Premium: Unlimited ($3/month)
+            {/* Free: 3 messages/day • Premium: Unlimited ($3/month) */}
           </div>
         </CardContent>
       </Card>
@@ -149,8 +149,8 @@ export function AuthCard() {
         </div>
 
         <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-400">Plan:</span>
-          <Badge 
+          {/* <span className="text-sm text-gray-400">Plan:</span> */}
+          {/* <Badge 
             variant={isPremium ? "default" : "outline"}
             className={isPremium ? "bg-yellow-600 text-white" : "border-green-500/30 text-green-400"}
           >
@@ -162,7 +162,7 @@ export function AuthCard() {
             ) : (
               'Free'
             )}
-          </Badge>
+          </Badge> */}
         </div>
 
         <div className="flex items-center justify-between">
