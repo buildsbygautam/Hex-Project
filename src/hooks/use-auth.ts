@@ -36,7 +36,7 @@ export function useAuth() {
         loadUserData(session.user.id);
       } else {
         setProfile(null);
-        setDailyUsage({ messageCount: 0, canSendMessage: true });
+        setDailyUsage({ messageCount: unlimited, canSendMessage: true });
       }
 
       setLoading(false);
