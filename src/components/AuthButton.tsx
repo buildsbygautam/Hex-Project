@@ -21,7 +21,7 @@ export function AuthButton() {
   } = useAuth();
 
   // Only ONE admin user allowed
-  const isAdmin = user?.email === 'viraggautam8@gmail.com';
+  const isAdmin = user?.email === 'admin';
 
   if (loading) {
     return (
