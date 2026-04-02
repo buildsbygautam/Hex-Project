@@ -656,12 +656,12 @@ const Index = () => {
     }
 
     // Check usage limits (only for new messages, not retries)
-    if (!isRetry && !canSendMessage) {
-      // Show billing popup instead of error message
-      console.log('❌ Usage limit check failed - showing billing popup');
-      setShowBillingPopup(true);
-      return;
-    }
+    // if (!isRetry && !canSendMessage) {
+    //   // Show billing popup instead of error message
+    //   console.log('❌ Usage limit check failed - showing billing popup');
+    //   setShowBillingPopup(true);
+    //   return;
+    // }
 
     // Check context limit and start new chat if needed (only for new messages, not retries)
     if (!isRetry && checkContextLimit(messageToSend)) {
@@ -692,11 +692,11 @@ const Index = () => {
     if (!isRetry && !autoTrigger) {
       // CRITICAL: Check usage limit BEFORE adding message to UI
       const usageIncremented = await incrementUsage();
-      if (!usageIncremented && !isPremium) {
-        // Usage limit exceeded - show billing popup and stop
-        console.log('❌ Daily message limit exceeded');
-        setShowBillingPopup(true);
-        return;
+      // if (!usageIncremented && !isPremium) {
+      //   // Usage limit exceeded - show billing popup and stop
+      //   console.log('❌ Daily message limit exceeded');
+      //   setShowBillingPopup(true);
+      //   return;
       }
 
       // Only add message to UI if usage increment succeeded
@@ -708,10 +708,10 @@ const Index = () => {
     } else if (autoTrigger && !isRetry) {
       // For auto-triggered messages, still increment usage (message already added)
       const usageIncremented = await incrementUsage();
-      if (!usageIncremented && !isPremium) {
-        console.log('❌ Daily message limit exceeded during auto-analysis');
-        setShowBillingPopup(true);
-        return;
+      // if (!usageIncremented && !isPremium) {
+      //   console.log('❌ Daily message limit exceeded during auto-analysis');
+      //   setShowBillingPopup(true);
+      //   return;
       }
     }
 
