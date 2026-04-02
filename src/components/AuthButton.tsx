@@ -73,8 +73,8 @@ export function AuthCard() {
     signInWithGitHub,
     signOut,
     isAuthenticated,
-    isPremium,
-    canSendMessage
+    isPremium=true,
+    canSendMessage=true
   } = useAuth();
 
   // Only ONE admin user allowed
